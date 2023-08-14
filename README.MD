@@ -1,5 +1,5 @@
 # CNN-KMeans SageMaker Algorithm
-The [Time Series Clustering (CNN-KMeans) Algorithm from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-mo7cf4nrgrbxk) 
+The [Time Series Clustering (CNN-KMeans) Algorithm from AWS Marketplace](placeholder) 
 performs time series clustering with an unsupervised convolutional neural network trained using contrastive learning 
 followed by a K-Means clusterer.
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
