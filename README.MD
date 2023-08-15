@@ -1,10 +1,10 @@
 # CNN-KMeans SageMaker Algorithm
 The [Time Series Clustering (CNN-KMeans) Algorithm from AWS Marketplace](placeholder) 
 performs time series clustering with an unsupervised convolutional neural network trained using contrastive learning 
-followed by a K-Means clusterer.
+followed by a K-Means clusterer. 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
 The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
-The Docker images include modifications of software licensed under the Apache License 2.0, see the [LICENSE](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/LICENSE) and [NOTICE](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/NOTICE).
+The Docker images include modifications of software licensed under the Apache License 2.0, see the [LICENSE](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/LICENSE) and [NOTICE](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/NOTICE).
 
 ## Model Description
 ### Model Architecture
@@ -83,7 +83,8 @@ The time series can have different lengths and can contain missing values.
 The time series are scaled internally by the algorithm, there is no need to scale the time series beforehand.
 See the sample input file `test_data.csv` in the `data/inference/input` folder.
 
-The inference algorithm outputs the predicted class labels, which are returned in CSV format.
+The inference algorithm outputs the predicted cluster labels and the extracted features, which are returned in CSV format.
+The predicted cluster labels are included in the first column, while the extracted features are included in the subsequent columns.
 See the sample output file `batch_predictions.csv` in the `data/inference/output/batch` folder.
 
 See `notebook.ipynb` for an example of how to launch a batch transform job.
