@@ -81,7 +81,7 @@ The CSV file should not contain any index column or column headers.
 Each row of the CSV file represents a time series, while each column represents a time step.
 The time series can have different lengths and can contain missing values.
 The time series are scaled internally by the algorithm, there is no need to scale the time series beforehand.
-See the sample input file `test_data.csv` in the `data/inference/input` folder.
+See the sample input file `test.csv` in the `data/inference/input` folder.
 
 The inference algorithm outputs the predicted cluster labels and the extracted features, which are returned in CSV format.
 The predicted cluster labels are included in the first column, while the extracted features are included in the subsequent columns.
