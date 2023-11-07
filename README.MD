@@ -46,9 +46,9 @@ The CSV file should not contain any index column or column headers.
 Each row of the CSV file represents a time series, while each column represents a time step.
 The time series can have different lengths and can contain missing values.
 The time series are scaled internally by the algorithm, there is no need to scale the time series beforehand.
+See the sample input files [`train.csv`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/data/training/train.csv) and [`valid.csv`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/data/training/valid.csv).
 
-See the sample input files `train.csv` and `valid.csv` in the `data/training/` folder.
-See `notebook.ipynb` for an example of how to launch a training job.
+See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to launch a training job.
 
 #### Hyperparameters
 The training algorithm takes as input the following hyperparameters:
@@ -73,7 +73,7 @@ If the `validation` channel is provided, the training algorithm also logs the fo
 - `valid_loss`: `float`. Validation loss.
 - `valid_score`: `float`. Validation Silhouette Coefficient.
 
-See `notebook.ipynb` for an example of how to launch a hyperparameter tuning job.
+See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to launch a hyperparameter tuning job.
 
 ### Inference
 The inference algorithm takes as input a CSV file containing the time series.
@@ -81,19 +81,18 @@ The CSV file should not contain any index column or column headers.
 Each row of the CSV file represents a time series, while each column represents a time step.
 The time series can have different lengths and can contain missing values.
 The time series are scaled internally by the algorithm, there is no need to scale the time series beforehand.
-See the sample input file `test.csv` in the `data/inference/input` folder.
+See the sample input file [`test.csv`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/data/inference/input/test.csv).
 
 The inference algorithm outputs the predicted cluster labels and the extracted features, which are returned in CSV format.
 The predicted cluster labels are included in the first column, while the extracted features are included in the subsequent columns.
-See the sample output file `batch_predictions.csv` in the `data/inference/output/batch` folder.
+See the sample output files [`batch_predictions.csv`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/data/inference/output/batch/batch_predictions.csv) and [`real_time_predictions.csv`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/data/inference/output/real-time/real_time_predictions.csv).
 
-See `notebook.ipynb` for an example of how to launch a batch transform job.
+See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to launch a batch transform job.
 
 #### Endpoints
 The algorithm supports only real-time inference endpoints. The inference image is too large to be uploaded to a serverless inference endpoint.
 
-See `notebook.ipynb` for an example of how to deploy the model to an endpoint, invoke the endpoint and process the response.
-See the sample output file `real_time_predictions.csv` in the `data/inference/output/real-time` folder.
+See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to deploy the model to an endpoint, invoke the endpoint and process the response.
 
 **Additional Resources:** [[Sample Notebook]](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) [[Blog Post]](https://medium.com/@fg-research/time-series-clustering-with-the-cnn-kmeans-sagemaker-algorithm-from-aws-marketplace-47bb3acb23a6?source=friends_link&sk=34880ec7bbe1bdb522035b1c1f5479c2)
 
