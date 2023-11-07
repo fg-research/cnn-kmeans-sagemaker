@@ -7,7 +7,6 @@ The training and inference Docker images were built by extending the PyTorch 2.0
 The Docker images include modifications of software licensed under the Apache License 2.0, see the [LICENSE](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/LICENSE) and [NOTICE](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/NOTICE).
 
 ## Model Description
-### Model Architecture
 The model has two components: an encoder which extracts the relevant features, 
 and a K-Means clusterer which takes as input the extracted features and predicts the cluster labels.
 
