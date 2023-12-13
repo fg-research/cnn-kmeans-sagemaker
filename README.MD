@@ -3,7 +3,7 @@ The [Time Series Clustering (CNN-KMeans) Algorithm from AWS Marketplace](https:/
 performs time series clustering with an unsupervised convolutional neural network trained using contrastive learning 
 followed by a K-Means clusterer. 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
-The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
+The training and inference Docker images were built by extending the PyTorch 2.1.0 Python 3.10 SageMaker containers.
 The Docker images include modifications of software licensed under the Apache License 2.0, see the [LICENSE](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/LICENSE) and [NOTICE](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/NOTICE).
 
 ## Model Description
