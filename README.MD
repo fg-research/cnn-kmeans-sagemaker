@@ -93,7 +93,7 @@ The algorithm supports only real-time inference endpoints. The inference image i
 
 See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to deploy the model to an endpoint, invoke the endpoint and process the response.
 
-**Additional Resources:** [[Sample Notebook]](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) [[Blog Post]](https://medium.com/@fg-research/time-series-clustering-with-the-cnn-kmeans-sagemaker-algorithm-from-aws-marketplace-47bb3acb23a6?source=friends_link&sk=34880ec7bbe1bdb522035b1c1f5479c2)
+**Additional Resources:** [[Sample Notebook]](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) [[Blog Post]](https://fg-research.com/blog/product/posts/cnn-kmeans-control-chart-clustering.html)
 
 ## References
 - J. Y. Franceschi, A. Dieuleveut and M. Jaggi, "Unsupervised scalable representation learning for multivariate time series," in *Advances in neural information processing systems*, vol. 32, 2019, [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738).
