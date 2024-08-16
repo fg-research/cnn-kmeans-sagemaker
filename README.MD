@@ -12,7 +12,8 @@ and a K-Means clusterer which takes as input the extracted features and predicts
 
 The encoder includes a stack of exponentially dilated causal convolutional blocks, followed by an adaptive max pooling layer and a linear output layer.
 Each block consists of two causal convolutional layers with the same dilation rate, each followed by weight normalization and Leaky ReLU activation.
-A residual connection is applied between the input and the output of each block, where the input is transformed by an additional convolutional layer with a kernel size of 1 when its length does not match the one of the output.
+A residual connection is applied between the input and the output of each block, where the input is transformed by an additional convolutional layer 
+with a kernel size of 1 when its length does not match the one of the output.
 
 <img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-diagram.png style="width:80%;margin-top:30px;margin-bottom:20px"/>
 
@@ -52,7 +53,7 @@ See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/
 #### Hyperparameters
 The training algorithm takes as input the following hyperparameters:
 - `clusters`: `int`. The number of clusters.
-- `algorithm`: `str`. The clustering algorithm.
+- `algorithm`: `str`. The clustering algorithm, either `"lloyd"` or `"elkan"`.
 - `blocks`: `int`. The number of blocks of convolutional layers.
 - `filters`: `int`.	The number of filters of all but the last convolutional layers.
 - `kernel-size`: `int`.	The size of the kernel of all non-residual convolutional layers.	
@@ -93,7 +94,7 @@ The algorithm supports only real-time inference endpoints. The inference image i
 
 See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to deploy the model to an endpoint, invoke the endpoint and process the response.
 
-**Additional Resources:** [[Sample Notebook]](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) [[Blog Post]](https://fg-research.com/blog/product/posts/cnn-kmeans-control-chart-clustering.html)
+**Additional Resources:** [[Sample Notebook]](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) [[Blog Post]](https://fg-research.com/blog/product/posts/cnn-kmeans-ecg-clustering.html)
 
 ## References
 - J. Y. Franceschi, A. Dieuleveut and M. Jaggi, "Unsupervised scalable representation learning for multivariate time series," in *Advances in neural information processing systems*, vol. 32, 2019, [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738).
