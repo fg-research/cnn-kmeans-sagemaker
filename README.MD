@@ -67,11 +67,9 @@ The training algorithm takes as input the following hyperparameters:
 #### Metrics
 The training algorithm logs the following metrics:
 - `train_loss`: `float`. Training loss.
-- `train_score`: `float`. Training Silhouette Coefficient.
 
 If the `validation` channel is provided, the training algorithm also logs the following additional metrics:
 - `valid_loss`: `float`. Validation loss.
-- `valid_score`: `float`. Validation Silhouette Coefficient.
 
 See [`notebook.ipynb`](https://github.com/fg-research/cnn-kmeans-sagemaker/blob/master/notebook.ipynb) for an example of how to launch a hyperparameter tuning job.
 
